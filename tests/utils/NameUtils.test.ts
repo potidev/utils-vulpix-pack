@@ -40,4 +40,14 @@ describe('NameUtils', () => {
       expect(NameUtils.getAvatarAcronyms('Maria do Carmo')).toBe('MC');
     });
   });
+
+  describe('capitalizeFirstLetter', () => {
+    it('should return the fist latter in uppercase', () => {
+      expect(NameUtils.capitalizeFirstLetter('joão silva')).toBe('João silva');
+      expect(NameUtils.capitalizeFirstLetter('João Silva')).toBe('João Silva');
+      expect(NameUtils.capitalizeFirstLetter('')).toBe('');
+      expect(NameUtils.capitalizeFirstLetter('João')).toBe('João');
+      expect(NameUtils.capitalizeFirstLetter('joão')).toBe('João');
+    });
+  });
 });

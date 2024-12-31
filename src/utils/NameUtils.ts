@@ -40,4 +40,7 @@ export class NameUtils {
     return `${firstNameAcronym}${lastNameAcronym}`;
   }
 
+
+  static capitalizeFirstLetter = (str: string): string =>
+    str.charAt(0).toUpperCase() + str.slice(1);
 }
