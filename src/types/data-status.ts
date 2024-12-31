@@ -1,0 +1,1 @@
+export type DataStatus = "none" | "loading" | "error" | "success";

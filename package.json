@@ -1,0 +1,24 @@
+{
+  "name": "@potidev/utils-vulpix-pack",
+  "version": "0.0.1",
+  "description": "typescript utils methods and types",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clear-build && tsc",
+    "clear-build": "rimraf dist",
+    "version": "node ./scripts/set-version.js"
+  },
+  "author": {
+    "name": "Eduardo Costa",
+    "url": "https://github.com/duduCMT"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "cpf-cnpj-validator": "^1.0.3"
+  }
+}
