@@ -1,23 +1,15 @@
 import { NameParts } from "../types/name";
 
 export class NameUtils {
-  static formatFullName(name: string) {
-    const nameArray = name.trim().toLocaleLowerCase().split(" ");
-    let formattedName = "";
-
-    for (let i = 0; i < nameArray.length; i++) {
-      let word = nameArray[i];
-
-      if (word.length <= 2) {
-        word = word.charAt(0).toLowerCase() + word.slice(1);
-      } else {
-        word = word.charAt(0).toUpperCase() + word.slice(1);
-      }
-      formattedName += word + " ";
-    }
-
-    formattedName = formattedName.trim();
-    return formattedName;
+  static formatFullName(name: string): string {
+    const nameArray = name.trim().toLocaleLowerCase().split(/\s+/);
+    return nameArray
+      .map((word) =>
+        word.length <= 2
+          ? word.charAt(0).toLowerCase() + word.slice(1)
+          : word.charAt(0).toUpperCase() + word.slice(1),
+      )
+      .join(' ');
   }
 
   static getNameParts(fullName: string): NameParts {
@@ -37,7 +29,15 @@ export class NameUtils {
   }
 
   static getAvatarAcronyms(fullName: string) {
-    const fullNameParts = NameUtils.getNameParts(fullName);
-    return `${fullNameParts.firstName.charAt(0).toUpperCase()}${fullNameParts.lastName !== "" ? fullNameParts.lastName.charAt(0).toUpperCase() : ""}`
+    if (!fullName.trim()) {
+      return '';
+    }
+
+    const nameParts = fullName.trim().split(' ');
+    const firstNameAcronym = nameParts[0]?.charAt(0).toUpperCase() || '';
+    const lastNameAcronym = nameParts.length > 1 ? nameParts[nameParts.length - 1]?.charAt(0).toUpperCase() : '';
+
+    return `${firstNameAcronym}${lastNameAcronym}`;
   }
+
 }

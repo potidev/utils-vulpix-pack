@@ -2,23 +2,55 @@
   "name": "@potidev/utils-vulpix-pack",
   "version": "0.0.1",
   "description": "typescript utils methods and types",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "npm run clear-build && tsc",
     "clear-build": "rimraf dist",
-    "version": "node ./scripts/set-version.js"
+    "version": "node ./scripts/set-version.js",
+    "prepublishOnly": "npm run test",
+    "test": "jest"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
   },
   "author": {
     "name": "Eduardo Costa",
     "url": "https://github.com/duduCMT"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "chalk": "^4.1.2",
+    "jest": "^29.7.0",
     "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "cpf-cnpj-validator": "^1.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/potidev/utils-vulpix-pack.git"
+  },
+  "keywords": [
+    "potidev",
+    "javascript",
+    "typescript",
+    "utils",
+    "react",
+    "nodejs",
+    "types"
+  ]
 }
