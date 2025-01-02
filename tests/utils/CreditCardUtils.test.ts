@@ -12,6 +12,9 @@ describe('CreditCardUtils', () => {
     it('should return the same string formated like a credit card number with spaces', () => {
       expect(CreditCardUtils.formatWithSpaces('1111 1111 1111 1111')).toBe('1111 1111 1111 1111');
     });
+    it('should return only the 32 numbers in a string with spaces', () => {
+      expect(CreditCardUtils.formatWithSpaces('11111111111111111')).toBe('1111 1111 1111 1111');
+    });
   });
   describe('getOnlyNumbers', () => {
     it('should return only numbers without spaces', () => {
