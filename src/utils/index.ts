@@ -1,4 +1,5 @@
 export * from "./ClassNameUtils";
+export * from "./ColorUtils";
 export * from "./DalayUtils";
 export * from "./DocumentUtils";
 export * from "./NameUtils";
