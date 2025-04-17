@@ -1,0 +1,20 @@
+{
+	"Create Shadcn Dropdown": {
+		"prefix": "dropdown",
+		"scope": "typescriptreact",
+		"body": [
+			"import React from \"react\";",
+			"",
+			"import * as DropdownMenuPrimitive from \"@radix-ui/react-dropdown-menu\"",
+      "",
+      "import { cn } from \"@/utils/ClassNameUtils\";",
+      "",
+      "import styles from \"./styles.module.scss\";",
+      "",
+      "$1",
+      "",
+      "export { ${TM_DIRECTORY/^.+[\\/\\\\]+(.*)$/${1:/capitalize}/} };",
+		],
+		"description": "React create funcional component"
+	},
+}

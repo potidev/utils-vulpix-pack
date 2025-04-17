@@ -1,0 +1,31 @@
+{
+	"SCSS import variables.module.scss": {
+		"scope": "scss,sass",
+		"prefix": "icolors",
+		"body": [
+		  "@use '../../../../styles/sass/variables.module.scss' as *;",
+		],
+		"description": "SCSS import variables.module.scss"
+	},
+	"SCSS default structure": {
+		"scope": "scss,sass",
+		"prefix": "scss",
+		"body": [
+			"@use '../../../../styles/sass/variables.module.scss' as *;",
+			"",
+			".container {",
+			"  display: flex;",
+			"}"
+		],
+		"description": "SCSS default structure"	
+	},
+	"SCSS tablet @media": {
+		"scope": "scss,sass",
+		"prefix": "tablet",
+		"body": [
+			"@media screen and (min-width: \\$tablet) {",
+			"  $1",
+			"}",
+		],
+	}
+}
