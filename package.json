@@ -1,6 +1,6 @@
 {
   "name": "@potidev/utils-vulpix-pack",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "typescript utils methods and types",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -38,6 +38,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
     "cpf-cnpj-validator": "^1.0.3"
   },
   "repository": {
