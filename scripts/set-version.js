@@ -24,8 +24,8 @@ function updateReadmeVersion(version) {
   try {
     const readmeContent = fs.readFileSync(readmePath, 'utf8');
     const updatedContent = readmeContent.replace(
-      /\[!\[\]\(https:\/\/img\.shields\.io\/badge\/Beta-([\d.]+)-purple\)\]\(https:\/\/www\.npmjs\.com\/package\/@potidev\/react-vulpix-pack\)/,
-      `[![](https://img.shields.io/badge/Beta-${version}-purple)](https://www.npmjs.com/package/@potidev/react-vulpix-pack)`
+      /\[!\[\]\(https:\/\/img\.shields\.io\/badge\/Beta-([\d.]+)-purple\)\]\(https:\/\/www\.npmjs\.com\/package\/@potidev\/utils-vulpix-pack\)/,
+      `[![](https://img.shields.io/badge/Beta-${version}-purple)](https://www.npmjs.com/package/@potidev/utils-vulpix-pack)`
     );
 
     fs.writeFileSync(readmePath, updatedContent, 'utf8');
