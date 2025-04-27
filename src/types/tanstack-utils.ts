@@ -7,4 +7,5 @@ export type ColumnTitle<T> = {
   accessorKey: (string & {}) | keyof T;
   title: string;
   defaultVisibility?: boolean;
+  className?: string;
 };
