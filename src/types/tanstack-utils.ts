@@ -4,6 +4,8 @@ export type ColumnVisibility<T> = {
 };
 
 export type ColumnTitle<T> = {
+  upLabel?: string;
+  downLabel?: string;
   accessorKey: (string & {}) | keyof T;
   title: string;
   defaultVisibility?: boolean;
