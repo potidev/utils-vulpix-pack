@@ -2,7 +2,7 @@
 
 # Potidev - Utils Vulpix Pack
 
-[![](https://img.shields.io/badge/Beta-1.0.16-purple)](https://www.npmjs.com/package/@potidev/utils-vulpix-pack)
+[![](https://img.shields.io/badge/Beta-1.0.17-purple)](https://www.npmjs.com/package/@potidev/utils-vulpix-pack)
 
 # Description
 
