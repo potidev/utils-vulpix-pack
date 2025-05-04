@@ -10,4 +10,5 @@ export type ColumnTitle<T> = {
   title: string;
   defaultVisibility?: boolean;
   className?: string;
+  fixed?: boolean;
 };
