@@ -1,6 +1,6 @@
 {
   "name": "@potidev/utils-vulpix-pack",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "typescript utils methods and types",
   "main": "dist/index.js",
   "module": "dist/index.js",
