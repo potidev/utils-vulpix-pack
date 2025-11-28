@@ -50,7 +50,7 @@ describe("StringUtils", () => {
     it('deve truncar o texto e adicionar "..." quando text.length > maxLength', () => {
       expect(StringUtils.truncateWithDots("HelloWorld", 8)).toBe("Hello...");
       expect(StringUtils.truncateWithDots("abcdef", 4)).toBe("a...");
-      expect(StringUtils.truncateWithDots("abcdef", 6)).toBe("abc...");
+      expect(StringUtils.truncateWithDots("abcdef", 6)).toBe("abcdef");
     });
 
     // Cenário 4: texto muito longo
